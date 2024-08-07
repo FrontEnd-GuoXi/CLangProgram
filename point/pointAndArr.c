@@ -3,12 +3,19 @@
 #define NUM_ROW 3
 #define NUM_COL 4
 
+int init_col(int i);
+int init_arr();
+int find_largest(int arr[], int n);
+int print_type ();
+
+
 // assignment to "int *" from incompatible pointer type "int (*)[3]"
 
 int main()
 {
     // init_col(2);
-    init_arr();
+    print_type();
+    // init_arr();
     return 0;
 }
 // http://192.168.31.98:82/-/profile/notifications
@@ -34,6 +41,13 @@ int init_col(int i) {
         printf("\n计算了%d次",acc);
         printf("\n指针地址是：%d", p);
     }
+    return 0;
+}
+
+int print_type () {
+    int arr[NUM_ROW][NUM_COL] = { {1, 2, 3, 4}, {5,6,7,8}, {9,10,11,12} }, (*p)[NUM_COL];
+    p = &arr[0];
+    printf("\np=%d,arr[0]=%d",p, arr[0]);
     return 0;
 }
 
