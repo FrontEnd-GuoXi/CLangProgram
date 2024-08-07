@@ -11,7 +11,7 @@ int main()
     init_arr();
     return 0;
 }
-
+// http://192.168.31.98:82/-/profile/notifications
 int init_arr() {
     int arr[NUM_ROW][NUM_COL];
     int *p;
